@@ -13,17 +13,19 @@
 
 利用二分查找，设置左右界限，不断逼近目标值。若未找到则，返回l。
 ---
-
-class Solution:
-  def searChInsert(self, nums:List[int],target:int) -> int:
-  n = len(nums)
-  l,r = 0, n-1
-  while l<= r:
-    mid = l + (r-l)//2
-    if nums[mid] < target:
-      l = mid + 1
-    elif nums[mid] > target:
-      r = mid - 1
-    else:
-      return mid
-   return l
+```python
+    class Solution:
+    def searChInsert(self, nums:List[int],target:int) -> int:
+    n = len(nums)
+    l,r = 0, n-1
+    while l<= r:
+      mid = l + (r-l)//2
+     if nums[mid] < target:
+       l = mid + 1
+     elif nums[mid] > target:
+        r = mid - 1
+     else:
+        return mid
+    return l
+```
+  
